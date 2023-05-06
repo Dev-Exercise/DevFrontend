@@ -11,15 +11,23 @@ const CsvForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle submission of csvFile here, e.g. by sending it to a server
-    console.log(csvFile);
+    console.log("Handle Submit", csvFile);
+    const formData = new FormData();
+    formData.append("csv", csvFile);
+    fetch("http://localhost:3001/import", {
+      method: "POST",
+      body: formData,
+    });
+
+    alert("Request Sent");
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg mx-auto flex items-center justify-center h-screen"
+      className="max-w-lg mx-auto flex items-center justify-center mt-9 pt-9 mb-2"
     >
+      <h1 className="text-center mr-5">Journey List</h1>
       <div className="flex items-center justify-center">
         <label htmlFor="csv-file" className="mr-3 cursor-pointer">
           <span className="border-2 border-gray-300 rounded-lg px-4 py-2 flex items-center">
@@ -32,7 +40,6 @@ const CsvForm = () => {
           accept=".csv"
           onChange={handleFileChange}
           className="hidden"
-          required
         />
         <button
           type="submit"

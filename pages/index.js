@@ -1,9 +1,12 @@
 import Link from "next/link";
 
+import Papa from "papaparse";
+import Form from "./components/form/Form";
+
 export default function Home() {
   return (
-    <main className="flex items-center justify-center h-screen">
-      <Link href="/components/form/csv">Welcome Back</Link>
+    <main className="">
+      <Form />
     </main>
   );
 }
