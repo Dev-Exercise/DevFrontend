@@ -46,10 +46,12 @@ export default function Form() {
 
     const formData = new FormData();
     formData.append("csv", jouneryFile);
-    fetch("http://localhost:3001/import-journey", {
+    fetch("https://journey-backend-7be5.onrender.com/import-journey", {
       method: "POST",
       body: formData,
     });
+
+    alert("Request Sent");
   };
 
   const handleStation = (e) => {
@@ -58,10 +60,11 @@ export default function Form() {
 
     const formData = new FormData();
     formData.append("csv", stationFile);
-    fetch("http://localhost:3001/import-station", {
+    fetch("https://journey-backend-7be5.onrender.com/import-station", {
       method: "POST",
       body: formData,
     });
+    alert("Request Sent");
   };
 
   return (

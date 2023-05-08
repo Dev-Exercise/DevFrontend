@@ -14,7 +14,7 @@ const CsvForm = () => {
     console.log("Handle Submit", csvFile);
     const formData = new FormData();
     formData.append("csv", csvFile);
-    fetch("http://localhost:3001/import", {
+    fetch("https://journey-backend-7be5.onrender.com/import", {
       method: "POST",
       body: formData,
     });

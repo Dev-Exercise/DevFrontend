@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 
 const StationForm = () => {
@@ -14,7 +13,7 @@ const StationForm = () => {
     console.log("Handle Submit", stationFile);
     const formData = new FormData();
     formData.append("csv", stationFile);
-    fetch("http://localhost:3001/import", {
+    fetch("https://journey-backend-7be5.onrender.com/import", {
       method: "POST",
       body: formData,
     });
