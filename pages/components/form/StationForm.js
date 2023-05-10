@@ -13,7 +13,7 @@ const StationForm = () => {
     console.log("Handle Submit", stationFile);
     const formData = new FormData();
     formData.append("csv", stationFile);
-    fetch("https://journey-backend-7be5.onrender.com/import", {
+    fetch("http://localhost:3001/import", {
       method: "POST",
       body: formData,
     });

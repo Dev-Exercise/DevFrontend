@@ -3,6 +3,7 @@ import Link from "next/link";
 import Papa from "papaparse";
 import Form from "./components/form/Form";
 import JourneyListView from "./components/JourneyListView/JourneyListView";
+import PaginationExample from "./components/test";
 export default function Home() {
   return (
     <main className="">
@@ -13,6 +14,6 @@ export default function Home() {
 }
 /*
 http://localhost:3001/
-https://journey-backend-7be5.onrender.com/
+http://localhost:3001/
 
 */
