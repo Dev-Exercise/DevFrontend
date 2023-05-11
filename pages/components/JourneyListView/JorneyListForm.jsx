@@ -7,7 +7,7 @@ const JourneyListForm = (item) => {
   const duration = item.item["Duration (sec"][")"];
 
   return (
-    <div className="border p-5 shadow-lg rounded-lg">
+    <div className="border px-6 py-8 shadow-lg rounded-lg">
       <h1>Departure Station Name: {departureStation}</h1>
       <p>Return Station Name: {returnStation} </p>
       <p>Covered Distance: {(coveredDistance / 1000).toFixed(2)} Kilometeres</p>
