@@ -1,14 +1,9 @@
-import Link from "next/link";
-
 import Papa from "papaparse";
-import Form from "./components/form/Form";
-import JourneyListView from "./components/JourneyListView/JourneyListView";
-import PaginationExample from "./components/test";
+import JourneyListView from "./JourneyListView";
 export default function Home() {
   return (
     <main className="">
       <JourneyListView />
-      {/* <Form /> */}
     </main>
   );
 }

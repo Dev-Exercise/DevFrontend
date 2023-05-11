@@ -1,7 +1,8 @@
 import Papa from "papaparse";
 import { useState } from "react";
+import Header from "./components/Header/Header";
 
-export default function Form() {
+export default function Import() {
   const [jouneryFile, setJourneyFile] = useState(null);
   const [stationFile, setStationFile] = useState(null);
 
@@ -68,58 +69,61 @@ export default function Form() {
   };
 
   return (
-    <main className="flex items-center justify-center h-screen">
-      <div>
-        <form
-          onSubmit={handleJourney}
-          className="border rounded-md shadow-lg mb-10 p-5 w-96"
-        >
-          <label
-            htmlFor="file1"
-            className="mb-2 block text-lg font-medium text-gray-700"
+    <>
+      <Header />
+      <main className="flex items-center justify-center h-screen">
+        <div>
+          <form
+            onSubmit={handleJourney}
+            className="border rounded-md shadow-lg mb-10 p-5 w-96"
           >
-            Journey List:
-          </label>
-          <input
-            type="file"
-            id="file1"
-            accept=".csv"
-            onChange={handleFileChange1}
-            className="mb-4"
-          />
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Submit
-          </button>
-        </form>
+            <label
+              htmlFor="file1"
+              className="mb-2 block text-lg font-medium text-gray-700"
+            >
+              Journey List:
+            </label>
+            <input
+              type="file"
+              id="file1"
+              accept=".csv"
+              onChange={handleFileChange1}
+              className="mb-4"
+            />
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Submit
+            </button>
+          </form>
 
-        <form
-          onSubmit={handleStation}
-          className="border rounded-md shadow-lg p-5 w-96"
-        >
-          <label
-            htmlFor="file2"
-            className="mb-2 block text-lg font-medium text-gray-700"
+          <form
+            onSubmit={handleStation}
+            className="border rounded-md shadow-lg p-5 w-96"
           >
-            Station List:
-          </label>
-          <input
-            type="file"
-            id="file2"
-            accept=".csv"
-            onChange={handleFileChange2}
-            className="mb-4"
-          />
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </main>
+            <label
+              htmlFor="file2"
+              className="mb-2 block text-lg font-medium text-gray-700"
+            >
+              Station List:
+            </label>
+            <input
+              type="file"
+              id="file2"
+              accept=".csv"
+              onChange={handleFileChange2}
+              className="mb-4"
+            />
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </main>
+    </>
   );
 }
