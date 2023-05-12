@@ -12,7 +12,10 @@ const Header = () => {
           >
             Journey List
           </Link>
-          <Link href="#" className="hover:text-slate-900 text-lg">
+          <Link
+            href="/StationListView"
+            className="hover:text-slate-900 text-lg"
+          >
             Station List
           </Link>
           <Link href="/Import" className="hover:text-slate-900 text-lg">
