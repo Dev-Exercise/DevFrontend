@@ -101,9 +101,15 @@ const PaginationExample = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
-          {currentItems.map((item, index) => (
-            <JourneyListForm key={item._id} item={item}></JourneyListForm>
-          ))}
+          {currentItems.length > 0 ? (
+            currentItems.map((item, index) => (
+              <JourneyListForm key={item._id} item={item}></JourneyListForm>
+            ))
+          ) : (
+            <h1 className="text-center my-5 font-bold">
+              No Jounrey Details Found
+            </h1>
+          )}
         </div>
         <h1 className="capitalize font-bold text-red-500 mb-5">
           You are visitng page number {currentPage + 1}

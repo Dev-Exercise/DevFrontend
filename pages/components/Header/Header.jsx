@@ -3,8 +3,11 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-gray-100 text-black">
-      <nav className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-center">
+    <header className="bg-gray-100 text-black flex px-10 items-center justify-center">
+      <nav className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+        <Link href="/" className="text-xl font-semibold">
+          Journey Station
+        </Link>
         <div className="flex items-center space-x-8">
           <Link
             href="/JourneyListView"
