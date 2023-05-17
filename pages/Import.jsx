@@ -1,6 +1,7 @@
 import Papa from "papaparse";
 import { useState } from "react";
 import Header from "./components/Header/Header";
+import NewJourney from "./components/NewJourney/NewJourney";
 
 export default function Import() {
   const [jouneryFile, setJourneyFile] = useState(null);
@@ -71,11 +72,13 @@ export default function Import() {
   return (
     <>
       <Header />
-      <main className="flex items-center justify-center h-screen">
-        <div>
+      <main className="flex justify-around gap-10">
+        <NewJourney />
+
+        <div className="flex gap-5 mt-10">
           <form
             onSubmit={handleJourney}
-            className="border rounded-md shadow-lg mb-10 p-5 w-96"
+            className="border rounded-md shadow-lg mb-10 p-5 w-96 h-48"
           >
             <label
               htmlFor="file1"
@@ -100,7 +103,7 @@ export default function Import() {
 
           <form
             onSubmit={handleStation}
-            className="border rounded-md shadow-lg p-5 w-96"
+            className="border rounded-md shadow-lg p-5 w-96 h-48"
           >
             <label
               htmlFor="file2"
