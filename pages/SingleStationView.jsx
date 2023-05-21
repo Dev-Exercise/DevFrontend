@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 import TableRow from "./components/StationListView/TableRow";
 import Header from "./components/Header/Header";
+import SimpleMap from "./GoogleMap";
 
 const SingleStationView = () => {
   const [startingData, setStartingData] = useState(0);
@@ -116,7 +117,6 @@ const SingleStationView = () => {
           throw new Error("Request failed");
         }
         const data = await response.json();
-        console.log(data);
         setTopFiveReturn(data);
       } catch (error) {
         console.error("Error:", error);
@@ -137,7 +137,6 @@ const SingleStationView = () => {
           throw new Error("Request failed");
         }
         const data = await response.json();
-        console.log(data[0]._id);
         setTopFiveStarting(data);
       } catch (error) {
         console.error("Error:", error);
@@ -147,6 +146,15 @@ const SingleStationView = () => {
     fetchData();
   }, []);
 
+  // const apiKey = "AIzaSyBA8bXzaG6lxAHbto6drxdjdkaUVjNZCMU"; // Replace with your actual API key
+  // const apiKey = "KnEXG3GovnlJ03rBuMAuoRt2OMyDJV6O"; // Replace with your actual API key
+
+  const center = {
+    lat: 37.7749, // latitude of the center point
+    lng: -122.4194, // longitude of the center point
+  };
+
+  const zoom = 10; // zoom level
   return (
     <>
       <Header />
@@ -163,17 +171,17 @@ const SingleStationView = () => {
           {Name} Station View
         </h1>
       </div>
-      <div class="flex flex-col">
-        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
-              <table class="min-w-full text-left text-sm font-light">
-                <thead class="border-b bg-white font-medium dark:border-neutral-500 dark:bg-neutral-600">
+      <div className="flex flex-col">
+        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+              <table className="min-w-full text-left text-sm font-light">
+                <thead className="border-b bg-white font-medium dark:border-neutral-500 dark:bg-neutral-600">
                   <tr>
-                    <th scope="col" class="px-10 py-4 text-lg">
+                    <th scope="col" className="px-10 py-4 text-lg">
                       Field Name
                     </th>
-                    <th scope="col" class="px-10 py-4 text-lg">
+                    <th scope="col" className="px-10 py-4 text-lg">
                       Field Value
                     </th>
                   </tr>
@@ -218,7 +226,7 @@ const SingleStationView = () => {
                     </td>
                     <td className="whitespace-nowrap px-10 py-4 ">
                       {topFiveStarting.map((item, index) => (
-                        <p key={item.count}>
+                        <p key={index}>
                           {" "}
                           {index + 1} - {item._id}
                         </p>
@@ -231,6 +239,8 @@ const SingleStationView = () => {
           </div>
         </div>
       </div>
+      <h1 className="text-center font-bold my-4 text-xl">Map of {Name}</h1>
+      <SimpleMap />
     </>
   );
 };

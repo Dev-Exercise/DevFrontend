@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 
 const PaginationExample = () => {
   const [data, setData] = useState([]);
-  console.log(data[0]);
 
   const columns = useMemo(
     () => [
