@@ -1,14 +1,10 @@
 import Papa from "papaparse";
 import JourneyListView from "./JourneyListView";
+import LandingPage from "./LandingPage";
 export default function Home() {
   return (
     <main className="">
-      <JourneyListView />
+      <LandingPage />
     </main>
   );
 }
-/*
-http://localhost:3001/
-https://journey-backend-7be5.onrender.com/
-
-*/
