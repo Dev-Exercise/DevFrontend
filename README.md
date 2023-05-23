@@ -1,7 +1,7 @@
 # Project Title
 
 Helsinki City Bike.
-Helsinki Region Transport’s (HSL) city bicycle stations in the cities of Helsinki and Espoo.
+Helsinki Region Transport’s city bicycle stations in the cities of Helsinki and Espoo.
 
 ## Table of Contents
 
