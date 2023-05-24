@@ -20,7 +20,7 @@ const StationListView = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/station-data?search=${search}`
+          `https://journey-backend-d8wk.onrender.com/station-data?search=${search}`
         );
 
         if (!response.ok) {
@@ -61,7 +61,7 @@ const StationListView = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5">
           {currentItems.map((item, index) => (
-            <SingleStation key={item._id} item={item}></SingleStation>
+            <SingleStation key={index} item={item}></SingleStation>
           ))}
         </div>
         <h1 className="capitalize font-bold text-red-500 mb-5">

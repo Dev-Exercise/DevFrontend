@@ -24,7 +24,10 @@ const NewJourney = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/newJourney", journeyData);
+      await axios.post(
+        "https://journey-backend-d8wk.onrender.com/newJourney",
+        journeyData
+      );
       alert("Journey saved successfully");
     } catch (error) {
       console.error("An error occurred while saving the journey:", error);

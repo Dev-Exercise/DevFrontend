@@ -1,14 +1,14 @@
 import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/router";
 
 const SingleStation = (props) => {
-  const router = useRouter();
+  const item = props.item;
 
-  //   console.log(props.item, "fromxs");
-  const Item = props.item;
+  if (!item || !item.Name) {
+    return null;
+  }
 
-  const objectString = encodeURIComponent(JSON.stringify(Item));
+  const objectString = encodeURIComponent(JSON.stringify(item));
 
   return (
     <div className="bg-gray-200 p-2">
@@ -16,7 +16,7 @@ const SingleStation = (props) => {
         className="hover:text-green-600 hover:font-bold"
         href={`/SingleStationView?myObject=${objectString}`}
       >
-        <span>{props.item.Name}</span>
+        <span>{item.Name}</span>
       </Link>
     </div>
   );

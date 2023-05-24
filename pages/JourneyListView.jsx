@@ -31,7 +31,9 @@ const PaginationExample = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/journey-data`);
+        const response = await fetch(
+          `https://journey-backend-d8wk.onrender.com/journey-data`
+        );
 
         if (!response.ok) {
           throw new Error("Request failed");

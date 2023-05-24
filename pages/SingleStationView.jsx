@@ -17,15 +17,15 @@ const SingleStationView = () => {
   const router = useRouter();
   const myObject = router.query.myObject
     ? JSON.parse(decodeURIComponent(router.query.myObject))
-    : null;
+    : {};
 
-  const { Name, Adress } = myObject;
+  const { Name = "", Adress = "" } = myObject;
   //--------------------------------- journeys starting from the station -------------------------
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/countStartingStation/${Name}`
+          `https://journey-backend-d8wk.onrender.com/countStartingStation/${Name}`
         );
 
         if (!response.ok) {
@@ -46,7 +46,7 @@ const SingleStationView = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/countEndingStation/${Name}`
+          `https://journey-backend-d8wk.onrender.com/countEndingStation/${Name}`
         );
 
         if (!response.ok) {
@@ -67,7 +67,7 @@ const SingleStationView = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/average-distance-starting/${Name}`
+          `https://journey-backend-d8wk.onrender.com/average-distance-starting/${Name}`
         );
 
         if (!response.ok) {
@@ -88,7 +88,7 @@ const SingleStationView = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/average-distance-ending/${Name}`
+          `https://journey-backend-d8wk.onrender.com/average-distance-ending/${Name}`
         );
 
         if (!response.ok) {
@@ -110,7 +110,7 @@ const SingleStationView = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/topReturnStations/${Name}`
+          `https://journey-backend-d8wk.onrender.com/topReturnStations/${Name}`
         );
 
         if (!response.ok) {
@@ -130,7 +130,7 @@ const SingleStationView = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/topDepartureStations/${Name}`
+          `https://journey-backend-d8wk.onrender.com/topDepartureStations/${Name}`
         );
 
         if (!response.ok) {
@@ -146,15 +146,12 @@ const SingleStationView = () => {
     fetchData();
   }, []);
 
-  // const apiKey = "AIzaSyBA8bXzaG6lxAHbto6drxdjdkaUVjNZCMU"; // Replace with your actual API key
-  // const apiKey = "KnEXG3GovnlJ03rBuMAuoRt2OMyDJV6O"; // Replace with your actual API key
-
   const center = {
-    lat: 37.7749, // latitude of the center point
-    lng: -122.4194, // longitude of the center point
+    lat: 37.7749,
+    lng: -122.4194,
   };
 
-  const zoom = 10; // zoom level
+  const zoom = 10;
   return (
     <>
       <Header />
@@ -212,7 +209,7 @@ const SingleStationView = () => {
                     </td>
                     <td className="whitespace-nowrap px-10 py-4 ">
                       {topFiveReturn.map((item, index) => (
-                        <p key={item.count}>
+                        <p key={index}>
                           {" "}
                           {index + 1} - {item._id}
                         </p>

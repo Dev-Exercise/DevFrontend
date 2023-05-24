@@ -48,7 +48,7 @@ export default function Import() {
 
     const formData = new FormData();
     formData.append("csv", jouneryFile);
-    fetch("http://localhost:3001/import-journey", {
+    fetch("https://journey-backend-d8wk.onrender.com/import-journey", {
       method: "POST",
       body: formData,
     });
@@ -62,7 +62,7 @@ export default function Import() {
 
     const formData = new FormData();
     formData.append("csv", stationFile);
-    fetch("http://localhost:3001/import-station", {
+    fetch("https://journey-backend-d8wk.onrender.com/import-station", {
       method: "POST",
       body: formData,
     });
