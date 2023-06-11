@@ -14,7 +14,7 @@ The Solita Dev Academy Finland 2023 project is a pre assignment that requires cr
 
 
 ## Acknowledgement 
--[Solita Dev Academy](https://www.solita.fi/en/academy/)
+- [Solita Dev Academy](https://www.solita.fi/en/academy/)
 
 ## Technology Used
 - [React.js](https://react.dev/)
@@ -22,6 +22,9 @@ The Solita Dev Academy Finland 2023 project is a pre assignment that requires cr
 - [Node.js](https://nodejs.org/)
 - [MongoDB](https://www.mongodb.com/)
 - [Vercel](https://vercel.com/)
+
+## Project Management tools
+https://github.com/orgs/Dev-Exercise/projects/1/views/1
 
 ## Installation
 Clone the code and run the command to install necessary packages:
@@ -46,9 +49,18 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Screenshot 
+![Home](https://github.com/Dev-Exercise/DevFrontend/assets/70383236/981406a1-1f4d-4099-bf1d-9a56336f7798)
+
+![Journey](https://github.com/Dev-Exercise/DevFrontend/assets/70383236/edaacaa8-b3bf-41f8-82d1-d840f1e89d97)
+
+![StationView](https://github.com/Dev-Exercise/DevFrontend/assets/70383236/c8fde8c9-6473-491c-bb1b-e9621baaf0b9)
 
 
 ## Poster
+
+- [Project Poster](https://github.com/Dev-Exercise/DevFrontend/files/11715674/Solita_Dev_Academy_poster.pdf)
+
+![poster](https://github.com/Dev-Exercise/DevFrontend/assets/70383236/460b6fa4-dd0f-4780-809b-532b3a260c3c)
 
 
 
