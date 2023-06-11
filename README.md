@@ -1,11 +1,13 @@
-# Helsinki city bike app
+# Helsinki city bike web app
 
-Helsinki Region Transport’s city bicycle stations in the cities of Helsinki and Espoo.
+The Solita Dev Academy Finland 2023 project is a pre assignment that requires creating a web application with a backend service for fetching data. The choice of backend technology is open, with options such as Java, Kotlin; C#, TypeScript and go suggested by Solita. The backend can utilize a database or memory based approach. It is important to provide clear instructions on building and running the project. Similarly choice of Frontend  technology is flexible. The focus is on delivering a fuctional web application while ensuring proper documentation and instructions. 
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Poster](#poster)
 - [Features](#features)
 - [License](#license)
 
@@ -31,6 +33,10 @@ pnpm dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Screenshot 
+
+
+
 ## Features
 
 - This appilcation provides bike sharing data.
@@ -51,3 +57,6 @@ State if you are open to contributions and provide guidelines for other develope
 Provide your contact information or any relevant links (e.g., personal website, email, social media) if users have questions or want to reach out to you. -->
 
 
+
+
+[def]: ./frontpage.png
