@@ -17,11 +17,11 @@ The Solita Dev Academy Finland 2023 project is a pre assignment that requires cr
 -[Solita Dev Academy](https://www.solita.fi/en/academy/)
 
 ## Technology Used
--[React.js](#react.js)(https://react.dev/)
--[Next.js](#next.js)(https://nextjs.org/)
--[Node.js](#node.js)(https://nodejs.org/)
--[MongoDB](#mongodb)(https://www.mongodb.com/)
--[Vercel](#vercel)(https://vercel.com/)
+- [React.js](https://react.dev/)
+- [Next.js](https://nextjs.org/)
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Vercel](https://vercel.com/)
 
 ## Installation
 Clone the code and run the command to install necessary packages:
